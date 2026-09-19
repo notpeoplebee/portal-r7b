@@ -90,7 +90,7 @@ st.markdown(
 
 # Header Estetik
 st.markdown(
-    "<h1 class='main-title'>📚 Portal Kelas R7B</h1>", unsafe_allow_html=True
+    "<h1 class='main-title'>Portal Kelas R7B</h1>", unsafe_allow_html=True
 )
 st.markdown(
     "<h6 class='sub-title'>Ruang informasi terpadu kelompok, tugas, dan jadwal"
@@ -106,7 +106,7 @@ tab1, tab2, tab3, tab4 = st.tabs(
 # --- TAB 1: INFO KELOMPOK ---
 with tab1:
   st.markdown(
-      "<p class='section-title'>✨ Daftar Kelompok Mata Kuliah</p>",
+      "<p class='section-title'>Daftar Kelompok Mata Kuliah</p>",
       unsafe_allow_html=True,
   )
 
@@ -127,7 +127,7 @@ with tab1:
 
       card_html = (
           "<div class='group-card'>"
-          f"<h3>📌 {kel}</h3>"
+          f"<h5>📌 {kel}</h5>"
           "<hr style='border-color: #B92B27; margin: 0.5rem 0 1rem 0;'>"
           "<div style='display: flex; flex-direction: column; gap: 8px;'>"
       )
@@ -152,7 +152,7 @@ with tab1:
 # --- TAB 2: DAFTAR TUGAS ---
 with tab2:
   st.markdown(
-      "<p class='section-title'>📋 List Tugas & Deadline</p>",
+      "<p class='section-title'>List Tugas & Deadline</p>",
       unsafe_allow_html=True,
   )
 
@@ -222,7 +222,7 @@ with tab2:
 # --- TAB 3: JADWAL KULIAH ---
 with tab3:
   st.markdown(
-      "<p class='section-title'>📅 Jadwal Kuliah Semester 7</p>",
+      "<p class='section-title'>Jadwal Kuliah Semester 7</p>",
       unsafe_allow_html=True,
   )
 
@@ -293,7 +293,7 @@ with tab3:
 # --- TAB 4: JADWAL LAB ---
 with tab4:
   st.markdown(
-      "<p class='section-title'>🧪 Jadwal Praktikum / Lab (LKMM1)</p>",
+      "<p class='section-title'>Jadwal Praktikum / Lab (LKMM1)</p>",
       unsafe_allow_html=True,
   )
   st.markdown("<br>", unsafe_allow_html=True)
