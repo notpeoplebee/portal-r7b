@@ -93,7 +93,7 @@ st.markdown(
     "<h1 class='main-title'>Portal Kelas R7B</h1>", unsafe_allow_html=True
 )
 st.markdown(
-    "<h6 class='sub-title'>Ruang informasi terpadu kelompok, tugas, dan jadwal"
+    "<h6 class='sub-title'>Informasi tentangkelompok, tugas, dan jadwal"
     " kuliah Mahasigma R7B</h6>",
     unsafe_allow_html=True,
 )
@@ -158,8 +158,7 @@ with tab2:
 
   st.markdown(
       "<p style='color: #D68A82; font-size: 0.85rem; margin-bottom:"
-      " 1.5rem;'>Semua tugas terangkum di sini. Pantau terus deadline-nya dan"
-      " jangan lupa dikerjain!!</p>",
+      " 1.5rem;'>Semua tugas terangkum di sini dan jangan lupa dikerjain!!</p>",
       unsafe_allow_html=True,
   )
 
