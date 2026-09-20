@@ -93,8 +93,7 @@ st.markdown(
     "<h1 class='main-title'>Portal Kelas R7B</h1>", unsafe_allow_html=True
 )
 st.markdown(
-    "<h6 class='sub-title'>Informasi tentang kelompok, tugas, dan jadwal"
-    " kuliah Mahasigma R7B</h6>",
+    "<h6 class='sub-title'>Informasi tentang kuliah Mahasigma R7B</h6>",
     unsafe_allow_html=True,
 )
 
@@ -359,7 +358,7 @@ with tab5:
   )
 
   subtab_luring1, subtab_luring2 = st.tabs(
-      ["Daftar Pertemuan & Tanggal", "ℹKetentuan Fakultas"]
+      ["Daftar Pertemuan & Tanggal", "Ketentuan Fakultas"]
   )
 
   with subtab_luring1:
@@ -493,28 +492,28 @@ with tab6:
     )
 
     agenda_gasal = [
-        ("Pengisian KRS (4 Hari)", "28 Agt - 1 Sep 2026", "📝"),
-        ("Dies Natalis Ke-21 UNINDRA", "6 September 2026", "🎉"),
-        ("Pelaksanaan Kuliah & Registrasi UTS (7 Pekan)", "7 Sep - 22 Okt 2026", "📚"),
-        ("Ujian Tengah Semester / UTS (8 Hari)", "26 Okt - 5 Nov 2026", "✍️"),
-        ("Ujian Susulan UTS (1 Hari)", "15 November 2026", "📌"),
-        ("Pelaksanaan Kuliah & Registrasi UAS/UPM (7 Pekan)", "9 Nov - 24 Des 2026", "📚"),
-        ("Libur Hari Natal & Tahun Baru", "26 Des 2026 - 1 Jan 2027", "🎄"),
-        ("Ujian Akhir Semester / UAS (4 Hari)", "4 - 8 Januari 2027", "📝"),
-        ("Ujian Susulan UAS (1 Hari)", "31 Januari 2027", "📌"),
-        ("Ujian Pengendali Mutu / UPM (8 Hari)", "11 - 21 Januari 2027", "🛡️"),
-        ("Ujian Pengendalian Mutu Susulan", "4 Februari 2027", "📌"),
-        ("Pendaftaran & Ujian Tugas Akhir (8 Pekan)", "Januari - Februari 2027", "🎓"),
-        ("Evaluasi Mutu Internal (EMI)", "Februari 2027", "📊"),
+        ("Pengisian KRS (4 Hari)", "28 Agt - 1 Sep 2026"),
+        ("Dies Natalis Ke-21 UNINDRA", "6 September 2026"),
+        ("Pelaksanaan Kuliah & Registrasi UTS (7 Pekan)", "7 Sep - 22 Okt 2026"),
+        ("Ujian Tengah Semester / UTS (8 Hari)", "26 Okt - 5 Nov 2026"),
+        ("Ujian Susulan UTS (1 Hari)", "15 November 2026"),
+        ("Pelaksanaan Kuliah & Registrasi UAS/UPM (7 Pekan)", "9 Nov - 24 Des 2026"),
+        ("Libur Hari Natal & Tahun Baru", "26 Des 2026 - 1 Jan 2027"),
+        ("Ujian Akhir Semester / UAS (4 Hari)", "4 - 8 Januari 2027"),
+        ("Ujian Susulan UAS (1 Hari)", "31 Januari 2027"),
+        ("Ujian Pengendali Mutu / UPM (8 Hari)", "11 - 21 Januari 2027"),
+        ("Ujian Pengendalian Mutu Susulan", "4 Februari 2027"),
+        ("Pendaftaran & Ujian Tugas Akhir (8 Pekan)", "Januari - Februari 2027"),
+        ("Evaluasi Mutu Internal (EMI)", "Februari 2027"),
     ]
 
-    for kegiatan, tanggal, ikon in agenda_gasal:
+    for kegiatan, tanggal, in agenda_gasal:
       card_agenda = (
           "<div class='schedule-card' style='display: flex; justify-content:"
           " space-between; align-items: center; margin-bottom: 0.6rem; padding:"
           " 0.9rem 1.2rem;'>"
           f"<div style='color: #F5E6CC; font-size: 0.95rem; font-weight:"
-          f" 600;'>{ikon} {kegiatan}</div>"
+          f" 600;'> {kegiatan}</div>"
           "<div><span class='custom-badge' style='background: #151B3D; color:"
           f" #D68A82; border-color: #B92B27; font-size: 0.8rem;'>🗓️"
           f" {tanggal}</span></div>"
@@ -529,31 +528,31 @@ with tab6:
     )
 
     agenda_genap = [
-        ("Pengisian KRS (4 Hari)", "22 - 25 Februari 2027", "📝"),
-        ("Pelaksanaan Kuliah Semester Genap (7 Pekan)", "1 Maret - 30 April 2027", "📚"),
-        ("Libur Idul Fitri 1448 H (9 Hari)", "8 - 18 Maret 2027", "🌙"),
-        ("Registrasi Ujian Tengah Semester (UTS)", "1 Maret - 30 April 2027", "📋"),
-        ("Ujian Tengah Semester / UTS (8 Hari)", "3 Mei - 13 Mei 2027", "✍️"),
-        ("Ujian Susulan UTS (1 Hari)", "30 Mei 2027", "📌"),
-        ("Kuliah Lanjutan & Registrasi UAS/UPM (7 Pekan)", "17 Mei - 2 Juli 2027", "📚"),
-        ("Libur Idul Adha 1448 H", "17 - 18 Mei 2027", "🕌"),
-        ("Registrasi Ujian Akhir Semester & UPM", "17 Mei - 2 Juli 2027", "📋"),
-        ("Ujian Akhir Semester / UAS (4 Hari)", "5 Juli - 9 Juli 2027", "📝"),
-        ("Ujian Susulan UAS (1 Hari)", "1 August 2027", "📌"),
-        ("Ujian Pengendali Mutu / UPM (8 Hari)", "12 Juli - 22 Juli 2027", "🛡️"),
-        ("Ujian Pengendalian Mutu Susulan", "6 Agustus 2027", "📌"),
-        ("Pendaftaran & Ujian Tugas Akhir (8 Pekan)", "Juli - Agustus 2027", "🎓"),
-        ("Evaluasi Mutu Internal (EMI)", "Agustus 2027", "📊"),
-        ("Audit Mutu Internal (AMI)", "September 2027", "🔍"),
+        ("Pengisian KRS (4 Hari)", "22 - 25 Februari 2027"),
+        ("Pelaksanaan Kuliah Semester Genap (7 Pekan)", "1 Maret - 30 April 2027"),
+        ("Libur Idul Fitri 1448 H (9 Hari)", "8 - 18 Maret 2027"),
+        ("Registrasi Ujian Tengah Semester (UTS)", "1 Maret - 30 April 2027"),
+        ("Ujian Tengah Semester / UTS (8 Hari)", "3 Mei - 13 Mei 2027"),
+        ("Ujian Susulan UTS (1 Hari)", "30 Mei 2027"),
+        ("Kuliah Lanjutan & Registrasi UAS/UPM (7 Pekan)", "17 Mei - 2 Juli 2027"),
+        ("Libur Idul Adha 1448 H", "17 - 18 Mei 2027"),
+        ("Registrasi Ujian Akhir Semester & UPM", "17 Mei - 2 Juli 2027"),
+        ("Ujian Akhir Semester / UAS (4 Hari)", "5 Juli - 9 Juli 2027"),
+        ("Ujian Susulan UAS (1 Hari)", "1 August 2027"),
+        ("Ujian Pengendali Mutu / UPM (8 Hari)", "12 Juli - 22 Juli 2027"),
+        ("Ujian Pengendalian Mutu Susulan", "6 Agustus 2027"),
+        ("Pendaftaran & Ujian Tugas Akhir (8 Pekan)", "Juli - Agustus 2027"),
+        ("Evaluasi Mutu Internal (EMI)", "Agustus 2027"),
+        ("Audit Mutu Internal (AMI)", "September 2027"),
     ]
 
-    for kegiatan, tanggal, ikon in agenda_genap:
+    for kegiatan, tanggal in agenda_genap:
       card_agenda = (
           "<div class='schedule-card' style='display: flex; justify-content:"
           " space-between; align-items: center; margin-bottom: 0.6rem; padding:"
           " 0.9rem 1.2rem;'>"
           f"<div style='color: #F5E6CC; font-size: 0.95rem; font-weight:"
-          f" 600;'>{ikon} {kegiatan}</div>"
+          f" 600;'> {kegiatan}</div>"
           "<div><span class='custom-badge' style='background: #151B3D; color:"
           f" #D68A82; border-color: #B92B27; font-size: 0.8rem;'>🗓️"
           f" {tanggal}</span></div>"
