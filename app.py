@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Konfigurasi halaman
-st.set_page_config(page_title="Portal Kelas R7B", page_icon="📑", layout="wide")
+st.set_page_config(page_title="Portal Kelas R7B", page_icon="📑", layout="centered")
 
 # --- CSS CUSTOM BUAT TEMA CLASSIC COLLEGIATE ---
 st.markdown(
