@@ -93,15 +93,20 @@ st.markdown(
     "<h1 class='main-title'>Portal Kelas R7B</h1>", unsafe_allow_html=True
 )
 st.markdown(
-    "<h6 class='sub-title'>Informasi tentangkelompok, tugas, dan jadwal"
+    "<h6 class='sub-title'>Informasi tentang kelompok, tugas, dan jadwal"
     " kuliah Mahasigma R7B</h6>",
     unsafe_allow_html=True,
 )
 
-# Menu Navigasi Tab
-tab1, tab2, tab3, tab4 = st.tabs(
-    ["Info Kelompok", "Daftar Tugas", "Jadwal Kuliah", "Jadwal Lab"]
-)
+# Menu Navigasi Utama (6 Tab)
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+    "Info Kelompok",
+    "Daftar Tugas",
+    "Jadwal Kuliah",
+    "Jadwal Lab",
+    "Jadwal Luring & Daring",
+    "Info Akademik",
+])
 
 # --- TAB 1: INFO KELOMPOK ---
 with tab1:
@@ -336,3 +341,222 @@ with tab4:
       "</div>"
   )
   st.markdown(lab2_html, unsafe_allow_html=True)
+
+# --- TAB 5: JADWAL LURING & DARING ---
+with tab5:
+  st.markdown(
+      "<p class='section-title'>Jadwal & Tanggal Luring/Daring (Semester"
+      " 7)</p>",
+      unsafe_allow_html=True,
+  )
+
+  st.markdown(
+      "<p style='color: #D68A82; font-size: 0.85rem; margin-bottom:"
+      " 1.5rem;'>Rincian jadwal pertemuan kuliah luring dan daring"
+      " berdasarkan kalender akademik FTIK & FMIPA (Semester Gasal"
+      " 2026/2027).</p>",
+      unsafe_allow_html=True,
+  )
+
+  subtab_luring1, subtab_luring2 = st.tabs(
+      ["Daftar Pertemuan & Tanggal", "ℹKetentuan Fakultas"]
+  )
+
+  with subtab_luring1:
+    pertemuan_data = [
+        (
+            "Pertemuan 1",
+            "7 September 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        ("Pertemuan 2", "14 September 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 3",
+            "21 September 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        ("Pertemuan 4", "28 September 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 5",
+            "5 Oktober 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        ("Pertemuan 6", "12 Oktober 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 7",
+            "19 Oktober 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        (
+            "Pertemuan 8 (UTS)",
+            "26 Okt - 5 Nov 2026",
+            "Ujian Tengah Semester",
+            "#D68A82",
+            "#151B3D",
+        ),
+        ("Pertemuan 9", "9 November 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 10",
+            "16 November 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        ("Pertemuan 11", "23 November 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 12",
+            "30 November 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        ("Pertemuan 13", "7 Desember 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 14",
+            "14 Desember 2026",
+            "Luring (Tatap Muka)",
+            "#B92B27",
+            "#F5E6CC",
+        ),
+        ("Pertemuan 15", "21 Desember 2026", "Daring (Online)", "#1D2B64", "#D68A82"),
+        (
+            "Pertemuan 16 (UAS)",
+            "4 - 8 Januari 2027",
+            "Ujian Akhir Semester",
+            "#D68A82",
+            "#151B3D",
+        ),
+    ]
+
+    for pertemuan, tanggal, status, bg_color, text_color in pertemuan_data:
+      card_tgl_html = (
+          "<div class='schedule-card' style='display: flex; justify-content:"
+          f" space-between; align-items: center; background: {bg_color};"
+          f" border-left: 5px solid #B92B27; margin-bottom: 0.8rem;'>"
+          f"<div><b style='color: {text_color}; font-size: 1rem;'>{pertemuan}</b><br><span"
+          f" style='color: {text_color}; opacity: 0.9; font-size:"
+          f" 0.85rem;'>🗓️ {tanggal}</span></div>"
+          f"<div><span class='custom-badge' style='background: #151B3D; color:"
+          f" #F5E6CC;'>{status}</span></div>"
+          "</div>"
+      )
+      st.markdown(card_tgl_html, unsafe_allow_html=True)
+
+  with subtab_luring2:
+    st.markdown(
+        "<div class='group-card'>"
+        "<h3>ℹKetentuan Fakultas (FTIK & FMIPA)</h3>"
+        "<hr style='border-color: #B92B27; margin: 0.8rem 0;'>"
+        "<div style='color: #F5E6CC; font-size: 0.95rem; line-height: 1.6;'>"
+        "• <b>Total Tatap Muka (Luring):</b> 6x / 7x pertemuan.<br>"
+        "• <b>Sebelum UTS:</b> 4x Pertemuan Luring (P1, P3, P5, P7)<br>"
+        "• <b>Setelah UTS:</b> 3x Pertemuan Luring (P10, P12, P14)<br>"
+        "• Sisanya dilaksanakan secara <b>Daring (Online)</b>.<br>"
+        "• Pastikan selalu cek portal ini tiap minggu biar nggak salah jadwal"
+        " masuk kelas!"
+        "</div>"
+        "</div>",
+        unsafe_allow_html=True,
+    )
+# --- TAB 6: INFO AKADEMIK ---
+with tab6:
+  st.markdown(
+      "<p class='section-title'>Kalender Akademik Unindra 2026/2027</p>",
+      unsafe_allow_html=True,
+  )
+
+  st.markdown(
+      "<p style='color: #D68A82; font-size: 0.85rem; margin-bottom:"
+      " 1.5rem;'>Jadwal lengkap kegiatan akademik Universitas Indraprasta PGRI"
+      " untuk Semester Gasal dan Genap.</p>",
+      unsafe_allow_html=True,
+  )
+
+  # Membuat Sub-Tab untuk Gasal dan Genap
+  subtab_gasal, subtab_genap = st.tabs([
+      "Semester Gasal 2026/2027",
+      "Semester Genap 2026/2027",
+  ])
+
+  with subtab_gasal:
+    st.markdown(
+        "<div class='schedule-day'>Semester Gasal 2026/2027</div>",
+        unsafe_allow_html=True,
+    )
+
+    agenda_gasal = [
+        ("Pengisian KRS (4 Hari)", "28 Agt - 1 Sep 2026", "📝"),
+        ("Dies Natalis Ke-21 UNINDRA", "6 September 2026", "🎉"),
+        ("Pelaksanaan Kuliah & Registrasi UTS (7 Pekan)", "7 Sep - 22 Okt 2026", "📚"),
+        ("Ujian Tengah Semester / UTS (8 Hari)", "26 Okt - 5 Nov 2026", "✍️"),
+        ("Ujian Susulan UTS (1 Hari)", "15 November 2026", "📌"),
+        ("Pelaksanaan Kuliah & Registrasi UAS/UPM (7 Pekan)", "9 Nov - 24 Des 2026", "📚"),
+        ("Libur Hari Natal & Tahun Baru", "26 Des 2026 - 1 Jan 2027", "🎄"),
+        ("Ujian Akhir Semester / UAS (4 Hari)", "4 - 8 Januari 2027", "📝"),
+        ("Ujian Susulan UAS (1 Hari)", "31 Januari 2027", "📌"),
+        ("Ujian Pengendali Mutu / UPM (8 Hari)", "11 - 21 Januari 2027", "🛡️"),
+        ("Ujian Pengendalian Mutu Susulan", "4 Februari 2027", "📌"),
+        ("Pendaftaran & Ujian Tugas Akhir (8 Pekan)", "Januari - Februari 2027", "🎓"),
+        ("Evaluasi Mutu Internal (EMI)", "Februari 2027", "📊"),
+    ]
+
+    for kegiatan, tanggal, ikon in agenda_gasal:
+      card_agenda = (
+          "<div class='schedule-card' style='display: flex; justify-content:"
+          " space-between; align-items: center; margin-bottom: 0.6rem; padding:"
+          " 0.9rem 1.2rem;'>"
+          f"<div style='color: #F5E6CC; font-size: 0.95rem; font-weight:"
+          f" 600;'>{ikon} {kegiatan}</div>"
+          "<div><span class='custom-badge' style='background: #151B3D; color:"
+          f" #D68A82; border-color: #B92B27; font-size: 0.8rem;'>🗓️"
+          f" {tanggal}</span></div>"
+          "</div>"
+      )
+      st.markdown(card_agenda, unsafe_allow_html=True)
+
+  with subtab_genap:
+    st.markdown(
+        "<div class='schedule-day'>Semester Genap 2026/2027</div>",
+        unsafe_allow_html=True,
+    )
+
+    agenda_genap = [
+        ("Pengisian KRS (4 Hari)", "22 - 25 Februari 2027", "📝"),
+        ("Pelaksanaan Kuliah Semester Genap (7 Pekan)", "1 Maret - 30 April 2027", "📚"),
+        ("Libur Idul Fitri 1448 H (9 Hari)", "8 - 18 Maret 2027", "🌙"),
+        ("Registrasi Ujian Tengah Semester (UTS)", "1 Maret - 30 April 2027", "📋"),
+        ("Ujian Tengah Semester / UTS (8 Hari)", "3 Mei - 13 Mei 2027", "✍️"),
+        ("Ujian Susulan UTS (1 Hari)", "30 Mei 2027", "📌"),
+        ("Kuliah Lanjutan & Registrasi UAS/UPM (7 Pekan)", "17 Mei - 2 Juli 2027", "📚"),
+        ("Libur Idul Adha 1448 H", "17 - 18 Mei 2027", "🕌"),
+        ("Registrasi Ujian Akhir Semester & UPM", "17 Mei - 2 Juli 2027", "📋"),
+        ("Ujian Akhir Semester / UAS (4 Hari)", "5 Juli - 9 Juli 2027", "📝"),
+        ("Ujian Susulan UAS (1 Hari)", "1 August 2027", "📌"),
+        ("Ujian Pengendali Mutu / UPM (8 Hari)", "12 Juli - 22 Juli 2027", "🛡️"),
+        ("Ujian Pengendalian Mutu Susulan", "6 Agustus 2027", "📌"),
+        ("Pendaftaran & Ujian Tugas Akhir (8 Pekan)", "Juli - Agustus 2027", "🎓"),
+        ("Evaluasi Mutu Internal (EMI)", "Agustus 2027", "📊"),
+        ("Audit Mutu Internal (AMI)", "September 2027", "🔍"),
+    ]
+
+    for kegiatan, tanggal, ikon in agenda_genap:
+      card_agenda = (
+          "<div class='schedule-card' style='display: flex; justify-content:"
+          " space-between; align-items: center; margin-bottom: 0.6rem; padding:"
+          " 0.9rem 1.2rem;'>"
+          f"<div style='color: #F5E6CC; font-size: 0.95rem; font-weight:"
+          f" 600;'>{ikon} {kegiatan}</div>"
+          "<div><span class='custom-badge' style='background: #151B3D; color:"
+          f" #D68A82; border-color: #B92B27; font-size: 0.8rem;'>🗓️"
+          f" {tanggal}</span></div>"
+          "</div>"
+      )
+      st.markdown(card_agenda, unsafe_allow_html=True)
