@@ -507,7 +507,7 @@ with tab6:
         ("Evaluasi Mutu Internal (EMI)", "Februari 2027"),
     ]
 
-    for kegiatan, tanggal, in agenda_gasal:
+    for kegiatan, tanggal in agenda_gasal:
       card_agenda = (
           "<div class='schedule-card' style='display: flex; justify-content:"
           " space-between; align-items: center; margin-bottom: 0.6rem; padding:"
